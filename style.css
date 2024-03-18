@@ -1,0 +1,1353 @@
+body{
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: capitalize;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:#0077be ;
+    --main-transition:0.5s;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+.main-tittle{
+    text-align: center;
+}
+.main-tittle .maintxon{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: var(--main-color);
+}
+.main-tittle h1{
+    margin: 20px auto;
+    font-size: 40px;
+}
+.container{
+width: 95%;
+margin: 60px auto;
+}
+i,button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+input,button{
+    border: none;
+    outline: none;
+}
+/* Start Foot Bar */
+.FootBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    align-items: center;
+    position: relative;
+    padding-bottom: 4px;
+    
+}
+.FootBar .FoobarL{
+    background-color: black;
+   width: 60%;
+   
+   padding: 10px 30px;
+   display: flex;
+   gap: 20px;
+
+   align-items: center;
+   position: relative;
+}
+.FootBar .FoobarL::before{
+    content: " ";
+    position: absolute;
+    background-color: black;
+    width: 10%;
+    height: 100%;
+    right: -10px;
+    transform: skewX(30deg);
+}
+
+.FootBar .FoobarL .Txicon{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+.FootBar .FoobarL .Txicon i{
+    color: var(--main-color);
+}
+.FootBar .FoobarL .Txicon p{
+    color: white;
+    font-size: 15px;
+    
+}
+.FootBar .FoobarR {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-right: 50px;
+}
+.FootBar .FoobarR i{
+    color: white;
+    font-size: 20px;
+    transition: var(--main-transition);
+}
+.FootBar .FoobarR i:hover{
+    color: black;
+}
+
+/* End Foot Bar */
+/* sTART HEADER */
+header{
+    background:url("images/Home-1.jpg") no-repeat ;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+header::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/50%);
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    position: sticky;
+    top:0;
+    padding: 10px 25px;
+    
+}
+nav .logo{
+    width: 15%;
+}
+nav .logo img{ 
+width: 100%;
+}
+nav .main{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+nav .main .liMain {
+    position: relative;
+}
+/* Start content Nav Bar */
+nav .main .liMain .major, .About,.Pages,.Service,.Project,.Blog ,.Shop{
+    position: absolute;
+    border-bottom: solid var(--main-color) 3px;
+    background-color: black;
+    top:40px;
+    width: max-content;
+    display: none;
+    
+    
+}
+
+nav .main .liMain .major a{
+    /* background-color: red; */
+    width: 50px;
+    font-size: 16px;
+    /* padding: 5px 20px 5px 5px; */
+}
+nav .main .liMain .major a:hover{
+    color:white;
+    
+}
+nav .main .liMain .major .liMajor{
+    /* background-color: green; */
+    padding: 5px 20px ;
+    transition: var(--main-transition);
+    
+}
+nav .main .liMain .major .liMajor:hover{
+    background-color: var(--main-color);
+}
+/* End content Nav Bar */
+nav .main .liMain a {
+    color: white;
+    font-size: 19px;
+    transition: var(--main-transition);
+
+}
+nav .main .liMain a:hover, nav .main i:hover{
+    color: var(--main-color);
+ 
+
+}
+nav .main i{
+    color: white;
+    font-size: 23px;
+    transition: var(--main-transition);
+}
+nav .main button{
+    color: white ;
+    background-color: #005685;
+    padding: 20px;
+    font-size:15px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    
+}
+nav .main button:hover{
+    background-color: var(--main-color);
+}
+.nav-search{
+    position: absolute;
+    right: -300px;
+    top: 100px;
+    transition: var(--main-transition);
+}
+.nav-search.open{
+    right: 80px;
+}
+.nav-search input{
+    width: 250px;
+    padding: 20px;
+    border-radius: 50px;
+}
+.nav-search i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    font-size: 20px;
+}
+nav .up{
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    color: white;
+    z-index: 500;
+    padding: 15px;
+    background-color: var(--main-color);
+    font-size: 20px;
+    border-radius: 50%;
+}
+.Hcenter{
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    width: 600px;
+    margin:  auto;
+    z-index: 100;
+    margin-top: 200px;
+    position: relative;
+    
+    border-bottom: solid var(--main-color) 4px;
+    opacity: 0.7;
+}
+.Hcenter .textMain{
+    
+    opacity: 1;
+    display: flex;
+    position: relative;
+    gap: 15px;
+    color: var(--main-color);
+    align-self: center;
+    margin: 20px 0;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.Hcenter .Tp{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.5;
+}
+.Hcenter  .diferent {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 40px;
+}
+.Hcenter button{
+    color: white ;
+    background-color: #005685;
+    padding: 20px;
+    font-size:15px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+
+}
+.Hcenter button:hover{
+    background-color: var(--main-color);
+}
+
+
+/* END HEADER */
+.boxes{
+    display: flex;
+    align-items: center;
+   
+    gap: 15px;
+
+}
+.boxes .box{
+    width: 23%;
+    position: relative;
+    padding: 20px;
+    background-color: black;
+    color: white;
+
+
+}
+.boxes .box i{
+    position: absolute;
+    background-color: var(--main-color);
+    font-size: 40px;
+    padding: 20px;
+    top: -50px;
+     left: 50%;
+     transform: translateX(-50%);
+   border-radius: 50%;
+    
+
+}
+.boxes .box h1{
+    margin: 20px 0;
+    font-size: 25px;
+}
+.boxes .box p{
+    margin: 20px 0;
+}
+/* sTART About */
+.SECabout{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.SECabout .Aleft{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+}
+.SECabout .Aleft .IMAGE1{
+    width: 45%;
+    position: relative;
+    top: -20px;
+}
+.SECabout .Aleft .IMAGE1 img{
+    width: 100%;
+}
+.SECabout .Aleft .IMAGE2{
+    position: relative;
+    width: 45%;
+}
+.SECabout .Aleft .IMAGE2 img{
+    width: 100%;
+}
+.SECabout .Aleft .IMAGE2 .IMTX{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-left: solid 3px var(--main-color);
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+   background-color: black;
+   opacity: 0.9;
+    transform: translateY(-50%);
+    align-items: center;
+
+}
+
+.SECabout .Aleft .IMAGE2 .IMTX h1{
+    color: var(--main-color);
+    font-size: 50px;
+}
+.SECabout .Aleft .IMAGE2 .IMTX p{
+    color: white
+}
+.SECabout .Aright {
+width: 50%;
+}
+.SECabout .Aright >*{
+    margin-bottom: 20px;
+}
+.SECabout .Aright .ABTI{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--main-color);
+}
+.SECabout .Aright .ABTI h3{
+    font-size: 20px;
+}
+.SECabout .Aright h1{
+    color: black;
+    font-size: 40px;
+    word-spacing: 5px;
+}
+.SECabout .Aright p{
+    color: grey;
+    line-height: 1.5;
+}
+
+.SECabout .Aright .ABOicon{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.SECabout .Aright .ABOicon i{
+    color: var(--main-color);
+    font-size: 23px;
+}
+.SECabout .Aright .ABOicon p{
+    color: grey;
+    
+}
+.SECabout .Aright button{
+    color: white ;
+    background-color: #005685;
+    padding: 20px;
+    font-size:15px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+
+}
+.SECabout .Aright button:hover{
+    background-color: var(--main-color);
+}
+
+
+/* End About */
+
+/* Start Counter */
+.DIGTAL{
+    background: url("images/Counter.jpg") fixed no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.DIGTAL::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/70%);
+}
+.DIGTAL .digtal{
+    padding-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.DIGTAL .digtal .Digbox{
+    text-align: center;
+}
+
+.digtal .Digbox i{
+    background-color: var(--main-color);
+    font-size: 40px;
+    padding: 20px;
+   border-radius: 50%;
+   color: white;
+
+}
+.digtal .Digbox h1{
+    font-size: 50px;
+    color: white;
+    margin: 10px 0;
+}
+.digtal .Digbox p{
+    color: white;
+    font-size: 22px;
+}
+/* End Counter */
+/* START SEVICE */
+.serboxes{
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.serboxes .serbox{
+    position: relative;
+    width: 33%;
+    border-bottom: solid 3px var(--main-color);
+   
+}
+.serboxes .serbox::before{
+    content:" ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/70%);
+   
+}
+.serboxes .serbox img{
+    width: 100%;
+}
+.serboxes .serbox .sercontent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.serboxes .serbox .sercontent i{
+    background-color: var(--main-color);
+    font-size: 40px;
+    margin: 20px 0;
+    position: relative;
+    padding: 20px;
+    color: white;
+    border-radius: 50%;
+}
+.serboxes .serbox .sercontent h1{
+    color: white;
+    
+}
+.serboxes .serbox .sercontent p{
+    color: white;
+    margin: 10px 0;
+}
+.serboxes .serbox .sercontent button{
+    color: white ;
+    background-color: #005685;
+    padding: 20px;
+    font-size:15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: var(--main-transition);
+
+}
+.serboxes .serbox .sercontent button:hover{
+    background-color: var(--main-color);
+}
+.service {
+    width: 100%;
+    height: max-content;
+}
+
+
+/* END SEVICE */
+/* Start Service */
+.Chouse{
+    background: url("images/WhyUs.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.Chouse::before{
+    content: " ";
+    width: 70%;
+    position: absolute;
+    background-color: rgb(0 0 0/70%);
+    top: 0;
+    left: -200px;
+    height: 100%;
+    transform: skewX(-10deg);
+}
+.CHOUSE{
+    padding: 20px 0;
+    z-index: 5px;
+    position: relative;
+}
+.CHOUSE .mainChos{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin: 20px 0;
+    gap: 20px;
+    color: var(--main-color);
+}
+.CHOUSE h1{
+    width: 40%;
+    color: white;
+    font-size: 45px;
+    word-spacing: 3px;
+}
+.CHOUSE h5{
+    color: #ccc;
+    font-weight: normal;
+    margin: 20px 0;
+    font-size: 17px;
+    width: 40%;
+}
+.CHOUSE .choseboxes{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    
+    gap: 15px;
+}
+.CHOUSE .choseboxes i{
+    background-color: var(--main-color);
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+.CHOUSE .choseboxes h2{
+    color: white;
+    margin: 5px 0;
+    font-size: 25px;
+}
+.CHOUSE .choseboxes p{
+    margin: 5px 0;
+    width: 80%;
+    color: #ccc;
+}
+/* End Service */
+/* Start Process */
+.proboxes{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.proboxes .probox{
+    position: relative;
+    width: 32%;
+    border-bottom: 4px solid var(--main-color);
+
+}
+.proboxes .probox::before{
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0/70%);
+}
+.proboxes .probox img{
+    width: 100%;
+}
+.proboxes .probox .procontent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.proboxes .probox .procontent h1{
+    color: white;
+    font-size: 50px;
+    margin: 10px 0;
+}
+.proboxes .probox .procontent h2{
+    color: white;
+    margin: 10px;
+    font-size: 28px;
+}
+.proboxes .probox .procontent p{
+    margin: 10px 0;
+    color: #ccc;
+   
+}
+
+/* End Process */
+/* Start Enhance */
+.Enhance{
+    position: relative;
+    background: url("images/Banner.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+.Enhance::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/5%);
+}
+.ENHANCE{
+    padding: 30px 0;
+}
+.ENHANCE .ENmain{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+    letter-spacing: 1.5px;
+    gap: 15px;
+    color: var(--main-color);
+    font-size: 25px;
+}
+.ENHANCE h1{
+    margin: 5px 0;
+    color: white;
+    font-size: 50px;
+    width: 40%;
+
+}
+.ENHANCE button{
+    color: white ;
+    background-color: #005685;
+    padding: 20px;
+    font-size:15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    cursor: pointer;
+
+}
+.ENHANCE button:hover{
+    background-color: var(--main-color);
+
+}
+/* End Enhance */
+/* Start Project */
+.projectul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+}
+.projectul .projectli{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    transition: var(--main-transition);
+
+}
+.projectul .projectli:hover{
+    background-color: var(--main-color);
+}
+.projectul  .All{
+    background-color: var(--main-color);
+}
+.projectul .projectli a{
+    color: white;
+}
+.projectboxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+
+}
+.projectboxes .probox{
+    width: 32%;
+    position: relative;
+    border-bottom: solid 3px var(--main-color);
+    overflow: hidden;
+}
+.projectboxes .probox::before{
+    content: " ";
+    position: absolute;
+    background-color: rgb(0 0 0/50%);
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 3px var(--main-color);
+}
+.projectboxes .probox img{
+    width: 100%;
+}
+.projectboxes .probox .Proicon{
+    position: absolute;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+    top: -150px;
+    transition: var(--main-transition);
+}
+.projectboxes .probox:hover .Proicon{
+    top:15px;
+}
+.projectboxes .probox .Proicon i{
+    background-color: var(--main-color);
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 50%;   
+    color: white;
+}
+.projectboxes .probox .Procontext{
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    color: white;
+}
+.projectboxes .probox .Procontext p{
+    margin-bottom: 10px;
+}
+/* End Project */
+/* Start Testimonials */
+.TEST{
+    background: url("images/Testimonials.jpg") fixed no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.TEST::before{
+ content: " ";
+ background-color: rgb(0 0 0/50%);
+ width: 100%;
+ position: absolute;
+ height: 100%;
+}
+.TESTboxes{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.testimonial{
+    position: relative;
+}
+.testimonial h1{
+    color: white;
+}
+.TESTboxes .TESTbox{
+    width: 50%;
+    background-color: white;
+    border-bottom: solid 3px var(--main-color);
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+    padding: 80px 10px 10px;
+}
+.TESTboxes .TESTbox img{
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: -50px;
+    width:15%;
+    transform: translateX(-50%);
+}
+.TESTboxes .TESTbox p{
+    margin: 10px 0;
+}
+.TESTboxes .TESTbox h1{
+    color: var(--main-color);
+}
+.TESTboxes .TESTbox h3{
+    margin: 20px 0;
+}
+.TESTboxes .TESTbox .StarIcon{
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.TESTIMONIAL{
+    width:100%;
+    height: max-content;
+}
+
+/* End Testimonials */
+/* Start Team */
+.TEAMboxes{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.TEAMboxes .TEAMbox{
+    position: relative;
+    overflow: hidden;
+    width: 24%;
+}
+.TEAMboxes .TEAMbox::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/50%);
+}
+.TEAMboxes .TEAMbox img{
+    width: 100%;
+}
+.TEAMboxes .TEAMbox .TEAMtext{
+    color: white;
+    position: absolute;
+    bottom:15px;
+    font-size: 23px;
+    left: 15px;
+}
+.TEAMboxes .TEAMbox .TEAMicon{
+    position: absolute;
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 23px;
+    transition: var(--main-transition);
+    
+    top: 0;
+    right: -150px;
+}
+.TEAMboxes .TEAMbox:hover .TEAMicon{
+    right: 0;
+}
+.TEAMboxes .TEAMbox .TEAMicon i{
+    transition: var(--main-transition);
+}
+.TEAMboxes .TEAMbox .TEAMicon i:hover{
+    color: var(--main-color);
+    background-color: white;
+}
+/* End Team */
+
+/* Start  plans */
+.PLANBOXES{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.PLANBOXES .pLANbox{
+    width: 33%;
+    position: relative;
+    border-bottom: solid 5px var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.PLANBOXES .pLANbox::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    background-color: rgb(0 0 0/50%);
+    height: 400px;
+}
+.PLANBOXES .pLANbox img{
+    width: 100%;
+    height: 400px;
+}
+.PLANBOXES .pLANbox .Plancontent{
+    position: absolute;
+    color: white;
+   text-align: center;
+    top:20%;
+    left: 30%;
+    transform: (-30%,-20%);
+
+}
+.PLANBOXES .pLANbox .Plancontent i{
+    background-color: var(--main-color);
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+   border-radius: 50%
+
+}
+.PLANBOXES .pLANbox .Plancontent p{
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.PLANBOXES .pLANbox ul{
+    padding: 0 20px;
+}
+.PLANBOXES .pLANbox li{
+    list-style:disc;
+    margin: 10px 0;
+    color: var(--main-color);
+}
+.PLANBOXES .pLANbox span{
+    color: grey;
+}
+.PLANBOXES .pLANbox button{
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 20px auto;
+    color: white ;
+    background-color: #005685;
+    padding: 20px;
+    font-size:15px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+
+}
+.PLANBOXES .pLANbox button:hover{
+    background-color: var(--main-color);
+}
+
+
+/* End  plans */
+.FOOTER{
+    background-color: black;
+    padding: 5px 0;
+   
+}
+footer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+footer .FOOTbox{
+    width: 23%;
+}
+footer .FOOTbox img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.LOGOFOT p{
+    color: white;
+    margin: 5px 0;
+}
+.LOGOFOT i {
+    color: var(--main-color);
+    font-size: 18px;
+    margin: 10px 0;
+}
+.LOGOFOT span{
+    color: white;
+    margin-left: 10px;
+}
+.LOGOFOT .FOOicons{
+    display: flex;
+    gap: 15px ;
+    align-items: center;
+}
+.LOGOFOT .FOOicons i{
+    padding: 15px;
+    font-size: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: solid 1px var(--main-color);
+    transition: var(--main-transition);
+}
+.LOGOFOT .FOOicons i:hover{
+    color: var(--main-color);
+    background-color: transparent;
+}
+.LIFOT h1{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: max-content;
+    padding: 0 0 20px 0;
+    border-bottom: solid 3px var(--main-color);
+}
+.LIFOT .FOOOtli{
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+    align-items: center;
+    font-size: 20px;
+}
+.LIFOT .FOOOtli i{
+    color: var(--main-color);
+}
+.LIFOT .FOOOtli p{
+    color: white;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.LIFOT .FOOOtli p:hover{
+    color: var(--main-color);
+}
+.INPUT h1{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: max-content;
+    padding: 0 0 20px 0;
+    border-bottom: solid 3px var(--main-color);
+}
+.INPUT p{
+    color: white;
+    margin: 20px 0;
+    line-height: 1.5;
+
+}
+.INPUT input{
+    display: block;
+    width: 80%;
+    margin: 20px 0;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    padding: 15px;
+    border: solid 1px var(--main-color);
+}
+.INPUT input::placeholder{
+    color: white;
+}
+
+.INPUT button{
+        display: block;
+        text-align: center;
+        align-items: center;
+        color: white ;
+        background-color: #005685;
+        padding: 20px;
+        font-size:15px;
+        border-radius: 10px;
+        transition: var(--main-transition);
+    
+}
+.INPUT button:hover{
+        background-color: var(--main-color);
+}
+
+/* sTART FOOTER */
+@media screen and (max-width : 480px){
+    .FootBar{
+        flex-direction: column;
+    }
+    .FootBar .FoobarL{
+        width: 100%;
+        gap: 0px;
+        padding: 0;
+    }
+    .FootBar .FoobarL::before{
+        transform: skewX(0);
+        width: 0;
+        height: 0;
+    }
+    nav{
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    nav .logo{
+        display: none                                  ;
+    }
+    nav .main{
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    nav .main i ,nav .main button{
+        display: none;
+    }
+    .Hcenter{
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .Hcenter .textMain{
+        justify-content: center;
+        
+    }
+    .Hcenter .Tp{
+        width: 100%;
+        text-align: start;
+        font-size: 23px;
+    }
+    .Hcenter  .diferent{
+        width: 100%;
+        font-size: 23px;
+    }
+    .boxes{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .boxes .box{
+        width: 90%;
+
+    }
+    .SECabout{
+        flex-direction: column-reverse;
+    }
+    .SECabout .Aleft{
+        width: 100%;
+    }
+    .SECabout .Aright{
+        width: 100%;
+    }
+    .DIGTAL{
+        height: max-content;
+    }
+    .DIGTAL .digtal{
+        flex-wrap: wrap;
+    }
+    .Chouse::before{
+        width: 100%;
+        left: 0;
+        transform: skewX(0);
+    }
+    .Chouse{
+        height: max-content;
+    }
+    
+
+    .CHOUSE h1{
+        width: 100%;
+    }
+    .CHOUSE h5{
+        width: 100%;
+    }
+    .CHOUSE .choseboxes i{
+        font-size: 20px;
+    }
+    .Enhance{
+        height: max-content;
+    }
+    .ENHANCE h1{
+        width: 100%;
+    }
+    .projectboxes{
+        flex-direction: column;
+    }
+    .projectboxes .probox{
+        width: 100%;
+    }
+    .TESTboxes .TESTbox{
+        width: 100%;
+    }
+    .TEAMboxes{
+        flex-direction: column;
+    }
+    .TEAMboxes .TEAMbox{
+        width: 90% ;
+    }
+    .PLANBOXES{
+        flex-direction: column;
+    }
+    .PLANBOXES .pLANbox{
+        width: 90%;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .FOOTbox{
+        width: 100%;
+    }
+}
+@media screen and (min-width : 481px) and (max-width : 770px){
+    
+    
+    .FootBar .FoobarL::before{
+        transform: skewX(0);
+        width: 0;
+        height: 0;
+    }
+    nav{
+       justify-content: space-around;
+        padding: 10px 0;
+        gap: 15px;
+    }
+    nav .logo{
+        display: none;
+    }
+    
+    nav .main{
+        gap: 10px;
+       
+    }
+    nav .main button{
+        display: none;
+    }
+
+    .Chouse::before{
+        width: 100%;
+        left: 0;
+        transform: skewX(0);
+    }
+    .Chouse{
+        height: max-content;
+    }
+    
+
+    .CHOUSE h1{
+        width: 100%;
+    }
+    .CHOUSE h5{
+        width: 100%;
+    }
+    .CHOUSE .choseboxes i{
+        font-size: 20px;
+    }
+    .Enhance{
+        height: max-content;
+    }
+    .ENHANCE h1{
+        width: 100%;
+    }
+
+    .TESTboxes .TESTbox{
+        width: 100%;
+    }
+    .TEAMboxes{
+        
+        flex-wrap: wrap;
+    }
+    .TEAMboxes .TEAMbox{
+        width: 45% ;
+    }
+    .PLANBOXES{
+        flex-direction: column;
+    }
+    .PLANBOXES .pLANbox{
+        width: 90%;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer .FOOTbox{
+        width: 45%;
+    }
+
+}
+@media screen and (min-width : 770px) and (max-width : 1100px){
+   
+
+    .Chouse::before{
+        width: 100%;
+        left: 0;
+        transform: skewX(0);
+    }
+    .Chouse{
+        height: max-content;
+    }
+    
+
+    .CHOUSE h1{
+        width: 100%;
+    }
+    .CHOUSE h5{
+        width: 100%;
+    }
+    .CHOUSE .choseboxes i{
+        font-size: 20px;
+    }
+    .Enhance{
+        height: max-content;
+    }
+    .ENHANCE h1{
+        width: 100%;
+    }
+
+    .TESTboxes .TESTbox{
+        width: 100%;
+    }
+    .TEAMboxes{
+        
+        flex-wrap: wrap;
+    }
+    .TEAMboxes .TEAMbox{
+        width: 45% ;
+    }
+
+    footer{
+        flex-wrap: wrap;
+    }
+    footer .FOOTbox{
+        width: 45%;
+    }
+
+}
+
